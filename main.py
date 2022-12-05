@@ -31,8 +31,11 @@ class SubtitleAPI(Resource):
                 subs = Subtitle(res.text)
 
                 # return klgrth paste
-                klgrth = KlgrthPaste()
-                return {"url": klgrth.paste(subs.generate())}
+                # klgrth = KlgrthPaste()
+                # return {"url": klgrth.paste(subs.generate())}
+
+                # return raw paste
+                return Response(subs.generate(), mimetype="text/plain")
             else:
                 return {"error": "subtitle not found"}, 404
         except Exception as e:
