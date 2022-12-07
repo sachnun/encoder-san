@@ -25,9 +25,8 @@ class Subtitle:
             # if time now is first than time before
             before = subs.events[i - 1]
             if i > 0 and e.start < subs.events[i - 1].end:
-                continue
-            if len(e.plaintext.strip()) <= 3 and len(before.plaintext.strip()) <= 3:
-                continue
+                if len(e.plaintext.strip()) <= 3 and len(before.plaintext.strip()) <= 3:
+                    continue
 
             e.plaintext = e.plaintext.replace("<i>", "").replace("</i>", "")
 

@@ -25,6 +25,6 @@ class KlgrthPaste:
         return url + "/raw"
 
 
-# if __name__ == "__main__":
-#     klgrth = KlgrthPaste()
-#     print(klgrth.paste("hello world 123"))
+if __name__ == "__main__":
+    klgrth = KlgrthPaste()
+    print(klgrth.paste("hello world 123"))
