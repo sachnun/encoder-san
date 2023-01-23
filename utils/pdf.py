@@ -33,7 +33,15 @@ class WebPDF:
             output = os.urandom(24).hex() + ".pdf"
 
         c = WebSite2PDF.Client()
-        c.pdf(url, output)
+        c.pdf(
+            url,
+            output,
+            seleniumOptions={
+                "--no-sandbox",
+                "--headless",
+                "--disable-gpu",
+            },
+        )
 
         with open(output, "rb") as f:
             file = io.BytesIO(f.read())
