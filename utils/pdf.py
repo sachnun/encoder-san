@@ -33,7 +33,7 @@ class WebPDF:
             output = os.urandom(24).hex() + ".pdf"
 
         c = WebSite2PDF.Client()
-        c.pdf(url, output, delay=30)
+        c.pdf(url, output)
 
         with open(output, "rb") as f:
             file = io.BytesIO(f.read())
