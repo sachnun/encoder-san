@@ -8,6 +8,12 @@ WORKDIR /usr/src/app
 # timezone to +7
 ENV TZ=Asia/Jakarta
 
+# install selenium with webdriver
+RUN apt-get update && apt-get install -y \
+    chromium \
+    chromium-driver \
+    && rm -rf /var/lib/apt/lists/*
+
 # copy the dependencies file to the working directory
 COPY requirements.txt .
 
