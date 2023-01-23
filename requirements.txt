@@ -36,5 +36,6 @@ uvicorn==0.20.0
 uvloop==0.17.0
 watchfiles==0.18.1
 webdriver-manager==3.8.5
+WebSite2PDF==0.1.1
 websockets==10.4
 wsproto==1.2.0
