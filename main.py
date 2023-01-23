@@ -4,7 +4,7 @@ from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, RedirectResponse, StreamingResponse
 
-from utils.pdf import PDF
+from utils.pdf import WebPDF
 
 
 tags_metadata = [
@@ -61,12 +61,6 @@ def web_to_pdf(
         description="URL of the web page to convert",
         example="https://google.com",
     ),
-    # optional
-    timeout: int = Query(
-        10,
-        description="Timeout in seconds",
-        example=10,
-    ),
 ):
     # refactor url
     # remove http:// or https://
@@ -81,7 +75,7 @@ def web_to_pdf(
         .split("/")[0]
     )
 
-    pdf = PDF(timeout=timeout)
+    pdf = WebPDF()
     file = pdf.convert(url)
 
     return StreamingResponse(
