@@ -18,7 +18,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # command to run on container start
-CMD [ "python", "./app.py" ]
+CMD [ "python", "./main.py" ]
 
 # export port 5000
 EXPOSE 5000
