@@ -1,21 +1,5 @@
-# File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,python,venv
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,linux,python,venv
-
-### Linux ###
-*~
-
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
+# Created by https://www.toptal.com/developers/gitignore/api/python,venv
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -183,6 +167,8 @@ cython_debug/
 # Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
 poetry.toml
 
+# ruff
+.ruff_cache/
 
 ### venv ###
 # Virtualenv
@@ -196,26 +182,4 @@ poetry.toml
 pyvenv.cfg
 pip-selfcheck.json
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,python,venv
-
-# Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-
+# End of https://www.toptal.com/developers/gitignore/api/python,venv
