@@ -60,7 +60,13 @@ def web_to_pdf(
         ...,
         description="URL of the web page to convert",
         example="https://google.com",
-    )
+    ),
+    # optional
+    timeout: int = Query(
+        10,
+        description="Timeout in seconds",
+        example=10,
+    ),
 ):
     # refactor url
     # remove http:// or https://
@@ -75,7 +81,7 @@ def web_to_pdf(
         .split("/")[0]
     )
 
-    pdf = PDF()
+    pdf = PDF(timeout=timeout)
     file = pdf.convert(url)
 
     return StreamingResponse(
